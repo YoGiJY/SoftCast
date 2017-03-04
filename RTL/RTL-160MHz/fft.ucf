@@ -1,0 +1,16 @@
+
+#Created by Constraints Editor (xc6vlx240t-ff1156-1) - 2016/05/09
+#
+NET "SYSCLK_N" LOC = "H9"; ## 5 on U11, 5 on U89 (DNP)
+NET "SYSCLK_P" LOC = "J9"; ## 4 on U11, 4 on U89 (DNP)
+
+NET "rst_clk" LOC = "B18"; ## 6 on SW1 DIP switch (active-High)
+NET "rst" LOC = "K22";    ## 7 on SW1 DIP switch (active-High)
+NET "enable" LOC = "K21"; ## 8 on SW1 DIP switch (active-High)
+#Created by Constraints Editor (xc6vlx240t-ff1156-1) - 2016/06/03
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 6.25 ns HIGH 50%;
+NET "SYSCLK_N" TNM_NET = SYSCLK_N;
+TIMESPEC TS_SYSCLK_N = PERIOD "SYSCLK_N" 5 ns HIGH 50%;
+NET "SYSCLK_P" TNM_NET = SYSCLK_P;
+TIMESPEC TS_SYSCLK_P = PERIOD "SYSCLK_P" 5 ns HIGH 50%;
